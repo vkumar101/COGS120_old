@@ -1,0 +1,111 @@
+<!-- login page -->
+
+<html>
+<head>
+    <title>Group Up</title>
+    <link rel = "stylesheet" type = "text/css" href = "loginStyle.css">
+    <script src = "scripts/information.js"> </script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+
+<script>
+  $(document).ready(function() {
+    $('.message a').click(function(){
+      $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+    });
+  });
+
+
+        function validate() {
+          username = document.getElementById("username");
+          password = document.getElementById("password");
+
+          var valid = false;
+          var users = JSON.parse(localStorage.getItem("allUsers") || "[]");
+            
+
+          users.forEach(function(user) {
+            if (username.value == user.username && password.value == user.password) {
+                
+              user = document.getElementById("username");
+              localStorage.setItem('currUser', user.value);
+              valid = true;
+            }
+          });
+          if (valid == false) {
+            swal("Invalid username and password. Please try again.");
+          }
+          return valid;
+        }
+
+        //localStorage.clear()
+        function addUser() {
+            var firstname = document.getElementById("firstname");
+            var lastname = document.getElementById("lastname");
+            var username = document.getElementById("newusername");
+            var password = document.getElementById("newpassword");
+            var fbURL = document.getElementById("fbURL");
+            var profilesrc = document.getElementById("profilepic");
+            var activities = document.getElementById("activities");
+
+            //alert(firstname.value)
+            //alert(lastname.value)
+            //alert(username.value)
+            //alert(password.value)
+            //alert(fbURL.value)
+            //alert(profilesrc.value)
+            //alert(activities.value)
+
+            if (firstname.value !== null && firstname.value !== ""
+                && lastname.value !== null && lastname.value !== ""
+                && username.value !== null && username.value !== ""
+                && password.value !== null && password.value !== "") {
+
+              var users = JSON.parse(localStorage.getItem("allUsers") || "[]");
+
+
+              users.push({firstname: firstname.value, lastname: lastname.value, username: username.value, password: password.value, fbURL: fbURL.value, profilesrc: profilesrc.value, activities: activities.value});
+              localStorage.setItem('allUsers', JSON.stringify(users));
+                
+              localStorage.setItem('currUser', username.value);
+
+          }
+            
+
+        }
+
+
+    </script>
+
+    <!--<link rel = "stylesheet" type = "text/css" href = "mystyle.css"> -->
+</head>
+    <body>
+      <div class="login-page">
+        <center><font size = "60" style="color:white;"> <b> Group Up </b></font></center>
+        <br />
+        <div class="form">
+         <form class="register-form" action="./homepage.html">
+            <input type="text" placeholder="first name" id= "firstname" required><br>
+            <input type="text" placeholder="last name" id="lastname" required><br>
+            <input type="text" placeholder="username" id="newusername" required><br>
+            <input type="password" placeholder="password" id="newpassword" required><br>
+            <input type="password" placeholder = "confirm password" required><br>
+            <input type="text" placeholder = "facebook URL" id="fbURL"><br>
+            Upload a profile picture <input type="file" name="pic" accept="image/*" id="profilepic"> <br>
+            <textarea placeholder="List some of the activities you are interested in: " name="myinfo" cols="40" rows="5" id="activities"></textarea> <br>
+            <button onclick="addUser()">create</button>
+            <p class="message">Already registered? <a href="#">Sign In</a></p>
+          </form>
+
+          <form class="login-form" action = "./homepage.html" onsubmit="return validate()">
+            <input type="text" placeholder="username" id="username" required/>
+            <input type="password" placeholder="password" id="password" required/>
+            <button type="submit">login</button>
+            <p class="message">Not registered? <a href="#">Create an account</a></p>
+          </form>
+        </div>
+      </div>
+    </body>
+</html>

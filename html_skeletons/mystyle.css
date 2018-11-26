@@ -1,0 +1,394 @@
+.eventsButton {
+    display: inline-block;
+    transition-duration: .25s;
+    text-align: center;
+    text-decoration: none !important;
+    font-family: "HelveticaNeue";
+    font-weight: bold;
+    color: black;
+     font-size: 24px;
+     height: 200px;
+     width: 300px;
+     padding: 10px;
+     border-radius: 5px;
+     -moz-border-radius: 5px;
+     -webkit-border-radius: 5px;
+     margin:10px;
+     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+     overflow: hidden;
+ }
+
+.eventsButton .centerer {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.eventsButton .eventText {
+  vertical-align: middle;
+  display: inline-block;
+}
+.eventsButton focus,
+.eventsButton hover {
+  color: black;
+}
+ .eventsButton .eventInfo {
+   font-weight: normal;
+   font-family: "HelveticaNeue";
+   font-style: oblique;
+   font-size: 16px;
+   color: gray;
+ }
+
+.eventPopup {
+  font-family: "HelveticaNeue";
+  font-weight: bold;
+  color: black;
+  font-size: 24px;
+  overflow: visible;
+}
+
+.eventPopup .popupInfo {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.modal-header {
+  background-color: #99ccff;
+  color: white;
+}
+
+.modal-title {
+  font-size: 24px;
+  font-family: "HelveticaNeue";
+  font-weight: bold;
+  text-align: center;
+}
+
+.modal-body {
+  font-size: 16px;
+  font-family: "HelveticaNeue";
+  text-align: left;
+  margin-left: 30px;
+  line-height: 25px;
+}
+
+/* The popup form - hidden by default */
+/*.event-popup {
+  display: none;
+  position: fixed;
+  top:50%;
+  left:50%;
+  width:400px;
+  margin-left:-200px;
+  margin-top:-200px;
+  background-color: #80bfff;
+  border-color: black;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  font-size: 20;
+  font-family: "HelveticaNeue-Light";
+}
+
+
+.event-popup button{
+  padding: 5px;
+  margin: 4px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+
+}
+*/
+/* Add styles to the form container */
+.event-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Set a style for the submit/login button */
+.event-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.event-container .cancel {
+  background-color: red;
+}
+
+
+/* for the side menu */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #80bfff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+
+    font-family: "HelveticaNeue";
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: white;
+}
+
+/* search bar */
+
+.topnav {
+  overflow: hidden;
+  background-color: #99ccff;
+  width: 100%;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  margin-left: 10px;
+  height: 50px;
+  background-color: #99ccff;
+}
+
+.topnav input[type=text] {
+  width: 70%;
+  padding: 6px;
+  margin-top: 8px;
+  margin-left: 50px;
+  font-size: 17px;
+  border: none;
+  border-radius: 4px;
+}
+
+.topnav .search-container button {
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+.topnav .search-container-new {
+  margin-left: 10px;
+  height: 50px;
+  background-color: #99ccff;
+}
+.pageTitle {
+  color: white;
+  font-size: 24px;
+  font-family: "HelveticaNeue";
+
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.topnav .search-container-new button {
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+  float: right
+}
+
+.topnav .search-container-new button:hover {
+  background: #ccc;
+}
+
+
+.container {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+    font-family: "HelveticaNeue";
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+
+}
+
+.col-75 input {
+    font-family: "HelveticaNeue";
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.container label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-style: "HelveticaNeue";
+}
+
+.container .submit {
+    background-color:  #80bfff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.container .cancel {
+    background-color: #f2f2f2;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.container .submit:hover {
+    background-color:  #1a8cff;
+}
+.container .cancel:hover {
+    background-color: transparent;
+}
+
+/* for the filter */
+.custom-select {
+    padding-left: 150px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.custom-select label {
+  font-family: "HelveticaNeue";
+  font-size: 16px;
+}
+
+.custom-select select {
+    font-family: "HelveticaNeue";
+    font-size: 16px;
+    width: 200px;
+    height: 40px;
+    background-color: white;
+}
+
+.custom-select .reset {
+    border-style: 1px solid #80bfff;
+    background-color: white;
+    color: black;
+    padding: 12px 15px;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.custom-select .reset:hover {
+    background-color: #80bfff;
+}
+
+.btnsearch {
+  width: 34.5;
+  height: 34.5;
+}
+
+.btnhome {
+  width: 34.5;
+  height: 34.5;
+}
+
+#posts td {
+    word-wrap:break-word;
+}
